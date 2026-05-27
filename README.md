@@ -3,87 +3,109 @@
 
 A Streamlit-based web dashboard integrating all 8 lab experiments into one complete application.
 
----
+Management System
 
-## 📁 Project Structure
+A professional Smart Campus Management System built using Python and Streamlit. This project helps manage student records, course enrollments, fee calculations, and academic analytics through an interactive web dashboard.
 
-```
+Features
+Student academic record management
+Course enrollment system
+Fee calculation and tracking
+Analytics dashboard with visualizations
+CSV-based data storage
+Streamlit interactive UI
+Modular Python architecture
+Project Structure
 smart_campus/
-├── app.py                        # Main Streamlit application (Lab 9 entry point)
-├── requirements.txt              # Python dependencies
-├── data/                         # Auto-created CSV storage
-│   ├── students.csv
-│   ├── courses.csv
+│
+├── app.py
+├── requirements.txt
+├── README.md
+│
+├── data/
 │   ├── academic_records.csv
+│   ├── courses.csv
 │   ├── enrollments.csv
 │   └── fees.csv
-└── modules/
-    ├── __init__.py
-    ├── data_store.py             # CSV/JSON read-write helpers
-    ├── student_registration.py   # Lab 1 — Grade evaluation, Student OOP model
-    ├── course_enrollment.py      # Lab 2 — Loop/continue/break enrollment logic
-    ├── search_sort.py            # Lab 4 — Bubble sort, Selection sort, Linear/Binary search
-    ├── fee_calculation.py        # Lab 5 — Fee functions with optional parameters
-    ├── file_manager.py           # Lab 6+7 — File I/O, directory scanner, custom exceptions
-    └── analytics.py              # Lab 8 — NumPy, Pandas, Matplotlib charts
-```
+│
+├── modules/
+│   ├── analytics.py
+│   ├── course_enrollment.py
+│   ├── data_store.py
+│   ├── fee_calculation.py
+│   └── file_manager.py
+Technologies Used
+Python
+Streamlit
+Pandas
+NumPy
+Matplotlib
+Requirements
 
----
+Install the following dependencies:
 
-## 🚀 How to Run
-
-### 1. Install dependencies
-```bash
+streamlit>=1.45.0
+pandas>=2.2.0
+numpy>=2.1.0
+matplotlib>=3.9.0
+Recommended Python Version
+Python 3.14.4
+Installation Guide
+1. Clone the Repository
+git clone https://github.com/your-username/smart-campus.git
+cd smart-campus
+2. Create Virtual Environment (Optional but Recommended)
+python -m venv venv
+3. Activate Virtual Environment
+Windows
+venv\Scripts\activate
+Linux / Mac
+source venv/bin/activate
+4. Install Dependencies
 pip install -r requirements.txt
-```
+Live Demo
 
-### 2. Launch the app
-```bash
-streamlit run app.py
-```
+Visit the deployed application here:
 
-The app opens at **http://localhost:8501**
+https://smart-campus-application-by-nk.streamlit.app/
+Running the Project
 
----
+Run the Streamlit application:
 
-## 📋 Lab-to-Module Mapping
+python -m streamlit run app.py
 
-| Lab | Topic | Module |
-|-----|-------|--------|
-| Lab 1 | Student Registration & Grade Evaluation | `student_registration.py` |
-| Lab 2 | Course Enrollment (loops, continue, break) | `course_enrollment.py` |
-| Lab 3 | Data Structures (lists, dicts, sets) | `data_store.py` + Analytics page |
-| Lab 4 | Sorting & Searching | `search_sort.py` |
-| Lab 5 | Fee Calculation (functions) | `fee_calculation.py` |
-| Lab 6 | File Handling (read/write/report) | `file_manager.py` |
-| Lab 7 | Directory Scanning + Exceptions | `file_manager.py` |
-| Lab 8 | Performance Analytics (NumPy/Pandas/Matplotlib) | `analytics.py` |
-| **Lab 9** | **Smart Campus System (Full Integration)** | **`app.py`** |
+After running, open the local URL shown in the terminal:
 
----
+http://localhost:8501
+Screenshots
 
-## 🖥️ Dashboard Pages
+Add your project screenshots here.
 
-- **🏠 Dashboard** — Summary cards, recent entries, performance snapshot
-- **📋 Student Registration** — Register students, grade evaluator (Lab 1), CRUD
-- **📚 Course Management** — Add courses, enroll students (Lab 2), max 5 per student
-- **🗂️ Student Records** — Add/edit/delete academic scores (Lab 3 data structures)
-- **🔍 Search & Sort** — Bubble/Selection sort, Linear/Binary search (Lab 4)
-- **💰 Fee Management** — Calculate fees with optional parameters (Lab 5)
-- **📁 File Manager** — CSV import/export, directory scanner (Lab 6+7)
-- **📊 Analytics** — Charts, statistics, grade distribution, set analysis (Lab 8)
+screenshots/homepage.png
+Future Improvements
+Firebase authentication integration
+Cloud database support
+AI-based analytics
+Attendance management system
+Mobile responsive UI
+Email notifications
+Contributing
 
----
+Contributions are welcome.
 
-## 💾 Data Storage
+Fork the repository
+Create a new branch
+Commit your changes
+Push to your branch
+Open a Pull Request
+License
 
-All data is stored as CSV files in the `data/` folder (auto-created on first run).
-Export to JSON is available from the File Manager page.
+This project is licensed under the MIT License.
 
-## 🛡️ Exception Handling
+Author
 
-Custom exceptions defined across modules:
-- `InvalidScoreError`, `DuplicateStudentError`
-- `MaxCourseLimitError`, `DuplicateEnrollmentError`, `InvalidCreditError`
-- `NegativeFeeError`
-- `MissingFileOrFolderError`, `InvalidFileFormatError`, `EmptyDirectoryError`
+Mahesh N K
+
+Support
+
+If you like this project, give it a ⭐ on GitHub.
